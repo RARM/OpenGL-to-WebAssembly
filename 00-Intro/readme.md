@@ -5,7 +5,7 @@
 
 This tutorial uses gcc/g++ on Ubuntu throughout the tutorial. The gcc compiler was installed while preparing a virtual machine using the following command:
 
-```console
+```txt
 rodolfo@ubuntu:~$ sudo apt install build-essential
 ```
 
@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
 ```
 
 Compile just with:
-```console
+```txt
 $ gcc -o main main.c -Wall
 ```
 
