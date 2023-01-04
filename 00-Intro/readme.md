@@ -1,4 +1,4 @@
-# 01 Introduction
+# 00 Introduction
 ## Setup the Environment
 
 **Goal**: The objective of this section is to setup an environment for later development.
