@@ -1,5 +1,5 @@
 # 01 Hello GTK
-The objective of this module is to create an 800x600 window and attach an OpenGL context to it. This tutorial doesn't teach how to use the GTK toolkit, but it is used only to create a window and an OpenGL context. Eventually, the target platform will be WebAssembly and an HTML canvas instead of using a GTK toolkit to create a native app.
+The objective of this module is to create an 800x600 window and attach an OpenGL context to it. This tutorial doesn't teach how to use the GTK toolkit, but it is used only to create a window and an OpenGL context. Eventually, the target platform will be WebAssembly and an HTML canvas instead of using a GTK toolkit.
 
 ## Installing and Testing GTK
 Let's start by installing the appropriate tools. Use the [instructions for your platform](https://www.gtk.org/docs/installations/). For Ubuntu use:
@@ -39,3 +39,13 @@ main (int    argc,
   return status;
 }
 ```
+
+This code should create a 200x200 window. To change the dimensions, alter the `gtk_window_set_default_size()` function argument values to 800 and 600. Add the `gtk_window_set_resizable()` function if you want to disable resizing.
+
+## The OpenGL Context
+
+```txt
+gcc $(pkg-config --cflags gtk4) -o main.out main.c -Wall $(pkg-config --libs gtk4) -lGL
+```
+
+Or `-lepoxy`.
