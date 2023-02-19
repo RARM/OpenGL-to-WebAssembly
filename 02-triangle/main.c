@@ -24,7 +24,7 @@ static void activate(GtkApplication* app, gpointer user_data) {
     GtkWidget* gl_area = gtk_gl_area_new();
     g_signal_connect(gl_area, "render", G_CALLBACK(render), NULL);
     gtk_window_set_child(GTK_WINDOW(window), gl_area);
-    
+
     gtk_window_present(GTK_WINDOW(window));
 }
 
